@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lato.className} antialiased leading-5`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
