@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Lato } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
-});
-
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.className} antialiased leading-5`}>
+      <body className={`${inter.className} antialiased leading-5`}>
         {children}
         <Analytics />
       </body>
