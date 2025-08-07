@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="py-30 px-10 flex flex-col gap-20">
+    <div className="py-30 px-2 sm:px-10 flex flex-col gap-20">
       <Navbar />
       <div className="flex flex-col gap-5 text-zinc-300 font-medium">
         <p className="text-lg text-white">Salutations</p>
