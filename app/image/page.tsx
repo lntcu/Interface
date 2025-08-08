@@ -19,16 +19,16 @@ const image = [
     text: "A upright pole.",
   },
   {
-    title: "Corridor",
-    text: "An indoor corridor.",
+    title: "Carpet",
+    text: "Pattern carpet (on the floor).",
   },
   {
     title: "Plant",
     text: "Plants in a box.",
   },
   {
-    title: "Support",
-    text: "A metal support pole.",
+    title: "Sky",
+    text: "A rather blue, clear sky.",
   },
   {
     title: "Water",
