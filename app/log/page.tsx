@@ -1,8 +1,8 @@
 "use client";
 
 import Navbar from "@/components/navbar";
-import { motion } from "motion/react";
 import Log from "../file/Log.mdx";
+import { motion, easeInOut } from "motion/react";
 
 export default function Page() {
   const container = {
@@ -10,7 +10,7 @@ export default function Page() {
     show: {
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: easeInOut,
         staggerChildren: 0.1,
       },
     },

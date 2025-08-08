@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/navbar";
-import { motion } from "motion/react";
+import { motion, easeInOut } from "motion/react";
 import Link from "next/link";
 
 const writing = [
@@ -23,7 +23,7 @@ export default function Page() {
     show: {
       transition: {
         duration: 0.5,
-        ease: "easeInOut",
+        ease: easeInOut,
         staggerChildren: 0.1,
       },
     },
@@ -40,7 +40,7 @@ export default function Page() {
       filter: "blur(0rem)",
       transition: {
         duration: 0.4,
-        ease: "easeInOut",
+        ease: easeInOut,
       },
     },
   };
@@ -64,7 +64,6 @@ export default function Page() {
               <Link
                 key={item.title}
                 href={`/writing/${item.link}`}
-                variants={child}
                 className="flex items-center justify-between group hover:bg-zinc-700/50 transition-all duration-300 px-2 py-0.5 rounded-lg -translate-x-2"
               >
                 <div className="group-hover:text-white transition-all duration-300">

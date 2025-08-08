@@ -1,4 +1,8 @@
-import { motion } from "motion/react";
+import type { MDXComponents } from "mdx/types";
+import Link from "next/link";
+import { motion, easeInOut } from "motion/react";
+import Image from "next/image";
+import type { ImageProps } from "next/image";
 
 const child = {
   hidden: {
@@ -12,14 +16,10 @@ const child = {
     filter: "blur(0rem)",
     transition: {
       duration: 0.4,
-      ease: "easeInOut",
+      ease: easeInOut,
     },
   },
 };
-
-import type { MDXComponents } from "mdx/types";
-import Image from "next/image";
-import Link from "next/link";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -91,8 +91,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </Link>
     ),
     img: (props) => (
-      <motion.Image
-        variants={child}
+      <Image
         width={1000}
         height={1000}
         {...(props as ImageProps)}

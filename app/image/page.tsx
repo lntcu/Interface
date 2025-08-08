@@ -2,7 +2,7 @@
 
 import Navbar from "@/components/navbar";
 import Image from "next/image";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, easeInOut } from "motion/react";
 import { useState } from "react";
 
 const image = [
@@ -61,7 +61,7 @@ export default function Page() {
       filter: "blur(0rem)",
       transition: {
         duration: 0.4,
-        ease: "easeInOut",
+        ease: easeInOut,
       },
     },
   };
