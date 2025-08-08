@@ -35,8 +35,12 @@ const image = [
     text: "Body of liquid.",
   },
   {
-    title: "Potato",
-    text: "A starchy plant tuber.",
+    title: "Sphere",
+    text: "A surface analogous to a circle.",
+  },
+  {
+    title: "Cave",
+    text: "Just a cave (and a ladder).",
   },
 ];
 
@@ -88,6 +92,7 @@ export default function Page() {
               layoutId={item.title}
               onClick={() => setExpand([item.title, item.text])}
               key={item.title}
+              whileTap={{ scale: 0.9 }}
             >
               <Image
                 src={`/${item.title}.jpeg`}
@@ -96,17 +101,21 @@ export default function Page() {
                 height={5000}
                 className="w-sm rounded-lg"
               />
-              <div className="absolute bottom-0 left-0 m-2 flex items-center justify-start w-full">
-                <div className="backdrop-blur-xs bg-zinc-800/50 text-sm px-2 rounded-sm">
-                  {item.title}
+              <motion.div
+                layoutId={`${item.title}_`}
+                className="absolute bottom-0 left-0 m-2 flex items-center justify-start w-full z-30"
+              >
+                <div className="backdrop-blur-xs shadow-inset[0_0_0.5rem] inset-shadow-zinc-700/30 backdrop-saturate-100 bg-zinc-800/30 shadow-xl shadow-zinc-700/30 text-sm px-2 rounded-sm">
+                  <p>{item.title}</p>
+                  <p className="hidden">{item.text}</p>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
       </motion.div>
       <motion.div
-        className={`fixed top-0 left-0 min-w-screen min-h-screen flex items-center justify-center z-50 ${expand[0] != "" ? "pointer-events-auto cursor-pointer" : "pointer-events-none"}`}
+        className={`fixed top-0 left-0 w-screen h-screen overflow-hidden flex items-center justify-center z-50 ${expand[0] != "" ? "pointer-events-auto cursor-pointer" : "pointer-events-none"}`}
         animate={{
           background: expand[0] != "" ? "#11182799" : "#00000000",
           backdropFilter: expand[0] != "" ? "blur(0.5rem)" : "blur(0rem)",
@@ -116,7 +125,7 @@ export default function Page() {
         <AnimatePresence>
           {expand[0] != "" && (
             <motion.div
-              layoutId={`${expand[0]}`}
+              layoutId={expand[0]}
               className="flex max-sm:flex-col max-sm:gap-3 items-end justify-center"
             >
               <Image
@@ -124,14 +133,18 @@ export default function Page() {
                 alt={expand[1]}
                 width={5000}
                 height={5000}
-                className="h-auto sm:h-screen w-screen sm:w-auto object-contain"
+                className="w-auto h-auto sm:h-screen max-sm:w-screen object-contain"
               />
-              <div className="sm:p-5 flex items-center justify-center w-full">
-                <div className="max-sm:backdrop-blur-xs max-sm:bg-zinc-800/50 px-2 py-0.5 rounded-lg font-medium">
+              <motion.div
+                layoutId={`${expand[0]}_`}
+                className="px-5 sm:p-5 w-full"
+                transition={{ type: "spring", duration: 0.5, bounce: 0.1 }}
+              >
+                <div className="font-medium">
                   <p className="text-lg">{expand[0]}</p>
                   <p className="text-zinc-300">{expand[1]}</p>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>

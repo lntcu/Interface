@@ -13,12 +13,12 @@ export default function Sidebar({ content }: prop) {
 
   return (
     <motion.div
-      className="fixed bottom-0 sm:top-0 right-0 sm:right-0 my-5 mx-3 sm:mx-7 z-50 rounded-lg backdrop-blur-lg h-max"
+      className="fixed bottom-0 sm:top-0 right-0 sm:right-0 my-5 mx-3 sm:mx-7 z-50 rounded-xl backdrop-blur-xs h-max backdrop-saturate-100"
       initial={{ opacity: 0, x: 200, filter: "blur(0.5rem)" }}
       animate={{ opacity: 1, x: 0, filter: "blur(0rem)" }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
-      <div className="flex items-start justify-center max-sm:justify-between rounded-xl bg-zinc-800/50 shadow-lg shadow-zinc-700/30 border-2 border-zinc-800/10 px-3 py-1">
+      <div className="flex items-start justify-center max-sm:justify-between rounded-xl inset-shadow-[0_0_2rem] inset-shadow-zinc-400/30 bg-zinc-800/30 shadow-xl shadow-zinc-700/30 px-3 py-1.5">
         <motion.div
           className="font-medium text-white text-nowrap cursor-pointer"
           onClick={() => setExpand(!expand)}
@@ -34,6 +34,7 @@ export default function Sidebar({ content }: prop) {
             opacity: expand ? 1 : 0,
             filter: expand ? "blur(0rem)" : "blur(0.5rem)",
             x: expand ? 0 : -20,
+            scale: expand ? 1 : 0.8,
           }}
         >
           {content.map((item) => (
