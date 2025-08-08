@@ -34,6 +34,10 @@ const image = [
     title: "Water",
     text: "Body of liquid.",
   },
+  {
+    title: "Potato",
+    text: "A starchy plant tuber.",
+  },
 ];
 
 export default function Page() {
