@@ -30,7 +30,6 @@ export default function Page() {
       transition: {
         staggerChildren: 0.1,
       },
-      scale: expand[0] != "" ? 0.95 : 1,
       opacity: expand[0] != "" ? 0.7 : 1,
     },
   };
@@ -72,6 +71,7 @@ export default function Page() {
               onClick={() => setExpand([item.title, item.text])}
               key={item.title}
               whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", bounce: 0.3 }}
             >
               <Image
                 src={`/${item.title}.jpeg`}
@@ -106,6 +106,7 @@ export default function Page() {
             <motion.div
               layoutId={expand[0]}
               className="flex max-sm:flex-col max-sm:gap-3 items-end justify-center"
+              transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
             >
               <Image
                 src={`/${expand[0]}.jpeg`}
@@ -117,7 +118,7 @@ export default function Page() {
               <motion.div
                 layoutId={`${expand[0]}_`}
                 className="px-5 sm:p-5 w-full"
-                transition={{ type: "spring", duration: 0.5, bounce: 0.1 }}
+                transition={{ type: "spring", bounce: 0.1 }}
               >
                 <div className="font-medium">
                   <p className="text-lg">{expand[0]}</p>

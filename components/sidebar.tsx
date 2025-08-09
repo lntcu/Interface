@@ -18,13 +18,15 @@ export default function Sidebar({ content }: prop) {
       animate={{ opacity: 1, x: 0, filter: "blur(0rem)" }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
-      <div className="flex items-start justify-center max-sm:justify-between rounded-xl inset-shadow-[0_0_2rem] inset-shadow-zinc-400/30 bg-zinc-800/30 shadow-xl shadow-zinc-700/30 px-3 py-1.5">
+      <div
+        className={`flex items-start justify-center max-sm:justify-between rounded-xl inset-shadow-[0_0_2rem] inset-shadow-zinc-800/30 bg-linear-to-r from-zinc-800/30 ${expand ? "to-zinc-800/60" : "to-zinc-800/30"} shadow-xl shadow-zinc-700/30 ${expand ? "px-3 sm:px-5 py-3 sm:py-3" : "px-3 py-1.5"} transition-all duration-300`}
+      >
         <motion.div
           className="font-medium text-white text-nowrap cursor-pointer"
           onClick={() => setExpand(!expand)}
           layout
         >
-          {expand ? "Close Menu" : "Table of Contents"}
+          {expand ? "Close Menu" : "Contents"}
         </motion.div>
         <motion.div
           className="flex flex-col items-start font-medium text-zinc-300 overflow-hidden w-full text-nowrap"

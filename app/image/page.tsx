@@ -53,7 +53,6 @@ export default function Page() {
       transition: {
         staggerChildren: 0.1,
       },
-      scale: expand[0] != "" ? 0.95 : 1,
       opacity: expand[0] != "" ? 0.7 : 1,
     },
   };
@@ -88,11 +87,12 @@ export default function Page() {
           {image.map((item) => (
             <motion.div
               variants={child}
-              className={`relative ${expand[0] == item.title ? "z-40" : ""}`}
+              className={`relative ${expand[0] == item.title ? "z-40" : ""} cursor-pointer`}
               layoutId={item.title}
               onClick={() => setExpand([item.title, item.text])}
               key={item.title}
               whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", bounce: 0.3 }}
             >
               <Image
                 src={`/${item.title}.jpeg`}
@@ -127,6 +127,7 @@ export default function Page() {
             <motion.div
               layoutId={expand[0]}
               className="flex max-sm:flex-col max-sm:gap-3 items-end justify-center"
+              transition={{ type: "spring", bounce: 0.3 }}
             >
               <Image
                 src={`/${expand[0]}.jpeg`}
