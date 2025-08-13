@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="fixed top-0 left-0 py-5 px-3 sm:px-7 z-50 max-sm:w-full">
         <div className="rounded-xl backdrop-blur-xs backdrop-saturate-100 inset-shadow-[0_0_1rem] inset-shadow-zinc-800/30 bg-zinc-800/30 flex max-sm:flex-col max-sm:w-full sm:items-center sm:justify-center shadow-xl shadow-zinc-700/30 sm:gap-20 px-3 py-1.5">
           <div className="flex items-center justify-between w-full">
-            <Link href="/" className="font-medium active:scale-90">
+            <Link href="/" className="font-semibold active:scale-90">
               Daniel
             </Link>
             <motion.div
@@ -56,7 +56,7 @@ export default function Navbar() {
               Image
             </Link>
           </motion.div>
-          <div className="flex items-center justify-center text-zinc-300 max-sm:hidden gap-5">
+          <div className="flex items-center justify-center text-zinc-300 max-sm:hidden gap-5 font-medium">
             <Link
               href="/"
               className="hover:text-white transition-all duration-300 active:scale-90"

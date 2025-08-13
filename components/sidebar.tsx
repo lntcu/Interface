@@ -26,7 +26,13 @@ export default function Sidebar({ content }: prop) {
           onClick={() => setExpand(!expand)}
           layout
         >
-          {expand ? "Close Menu" : "Contents"}
+          {expand ? (
+            <span>
+              Close<span className="max-sm:hidden"> Menu</span>
+            </span>
+          ) : (
+            "Contents"
+          )}
         </motion.div>
         <motion.div
           className="flex flex-col items-start font-medium text-zinc-300 overflow-hidden w-full text-nowrap"
@@ -43,7 +49,7 @@ export default function Sidebar({ content }: prop) {
             <Link
               key={item}
               href={`#${item}`}
-              className="pl-20 cursor-pointer hover:text-white transition-all duration-300 w-full text-nowrap"
+              className="pl-10 sm:pl-20 cursor-pointer hover:text-white transition-all duration-300 w-full text-nowrap"
             >
               <div>{item}</div>
             </Link>

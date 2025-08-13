@@ -26,7 +26,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: ({ children }) => (
       <motion.p
         variants={child}
-        className="text-xl font-medium sm:w-sm"
+        className="text-xl font-semibold sm:w-sm"
         id={children}
       >
         {children}
@@ -35,7 +35,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h2: ({ children }) => (
       <motion.p
         variants={child}
-        className="text-lg font-medium pt-20 sm:w-sm"
+        className="text-lg font-semibold pt-20 sm:w-sm"
         id={children}
       >
         {children}
@@ -44,7 +44,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h3: ({ children }) => (
       <motion.p
         variants={child}
-        className="font-medium pt-20 sm:w-sm"
+        className="font-semibold pt-20 sm:w-sm"
         id={children}
       >
         {children}

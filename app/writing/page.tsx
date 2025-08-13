@@ -7,6 +7,11 @@ import Link from "next/link";
 
 const writing = [
   {
+    title: "Privacy Policy",
+    link: "privacy",
+    date: "August 11, 2025",
+  },
+  {
     title: "Colophon",
     link: "colophon",
     date: "August 8, 2025",
@@ -76,7 +81,7 @@ export default function Page() {
   }, [tab, controls]);
 
   return (
-    <div className="py-30 px-6 sm:px-10">
+    <div className="py-30 px-4 sm:px-8">
       <Navbar />
 
       <motion.div
@@ -86,7 +91,7 @@ export default function Page() {
         animate="show"
       >
         <div className="flex flex-col gap-5 text-zinc-300 font-medium">
-          <p className="text-lg text-white">Writing</p>
+          <p className="text-lg text-white px-2">Writing</p>
           <div className="w-full sm:w-sm relative">
             <div className="flex flex-col relative">
               {writing.map((item, index) => (
@@ -98,15 +103,15 @@ export default function Page() {
                     data-tab={index}
                     className="flex items-center justify-between px-2 py-0.5 text-zinc-200 my-0.5"
                   >
-                    <div className="text-lg font-medium">{item.title}</div>
-                    <div>{item.date}</div>
+                    <div className="sm:text-lg font-medium">{item.title}</div>
+                    <div className="max-sm:text-sm">{item.date}</div>
                   </Link>
                 </motion.div>
               ))}
             </div>
             <motion.div
               aria-hidden
-              className="absolute inset-0 w-full h-full bg-zinc-600/40"
+              className="absolute inset-0 w-full h-full bg-zinc-700/40"
               initial={{ clipPath: "inset(0 100% 0 0)" }}
               animate={controls}
               ref={containerRef}
@@ -121,8 +126,8 @@ export default function Page() {
                       data-tab={index}
                       className="flex items-center justify-between px-2 py-0.5 my-0.5 rounded-lg active:bg-zinc-600/30 transition-all duration-300"
                     >
-                      <div className="text-lg font-medium">{item.title}</div>
-                      <div>{item.date}</div>
+                      <div className="sm:text-lg font-medium">{item.title}</div>
+                      <div className="max-sm:text-sm">{item.date}</div>
                     </Link>
                   </motion.div>
                 ))}

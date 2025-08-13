@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/navbar";
-import Log from "../file/Log.mdx";
+import Log from "./Log.mdx";
 import { motion, easeInOut } from "motion/react";
 
 export default function Page() {

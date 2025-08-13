@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Image from "next/image";
 import { AnimatePresence, motion, easeInOut } from "motion/react";
 import { useState } from "react";
-import Salutation from "./file/Salutation.mdx";
+import Salutation from "./Salutation.mdx";
 
 const image = [
   {

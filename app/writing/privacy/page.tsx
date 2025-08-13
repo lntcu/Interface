@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/navbar";
-import Colophon from "./Colophon.mdx";
+import Privacy from "./Privacy.mdx";
 import { motion, easeInOut } from "motion/react";
 
 export default function Page() {
@@ -25,7 +25,7 @@ export default function Page() {
         initial="hidden"
         animate="show"
       >
-        <Colophon />
+        <Privacy />
       </motion.div>
     </div>
   );
