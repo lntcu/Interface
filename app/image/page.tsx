@@ -16,7 +16,7 @@ const image = [
   },
   {
     title: "Pole",
-    text: "A upright pole.",
+    text: "An upright pole.",
   },
   {
     title: "Carpet",

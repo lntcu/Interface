@@ -17,7 +17,7 @@ const writing = [
     date: "August 8, 2025",
   },
   {
-    title: "Salautation",
+    title: "Salutation",
     link: "../",
     date: "August 8, 2025",
   },
