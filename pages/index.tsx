@@ -10,7 +10,7 @@ const Links = [
 
 export default function Page() {
   return (
-    <div className="w-full h-full flex items-center justify-center p-20">
+    <div className="w-full h-full flex items-center justify-center p-20 max-sm:px-5">
       <div className="flex flex-col gap-20 w-full max-w-lg">
         <div>
           <Link
@@ -25,7 +25,7 @@ export default function Page() {
             <Link
               key={index}
               href={item.link}
-              className="w-full hover:bg-zinc-100 dark:hover:bg-zinc-900 px-2 py-1 rounded-lg cursor-pointer transition-all duration-300 flex items-center justify-between"
+              className="w-full px-2 py-1 rounded-lg cursor-pointer transition-all duration-200 flex items-center justify-between opacity-70 hover:opacity-100"
             >
               <div className="text-black dark:text-white font-semibold">
                 {item.title}

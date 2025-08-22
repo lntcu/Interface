@@ -14,9 +14,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h1>
     ),
     p: ({ children }) => (
-      <p className="font-medium text-zinc-600 dark:text-zinc-300 py-5">
-        {children}
-      </p>
+      <p className=" text-zinc-600 dark:text-zinc-300 py-5">{children}</p>
     ),
     strong: ({ children }) => <span className="font-semibold">{children}</span>,
     em: ({ children }) => <span className="italic">{children}</span>,

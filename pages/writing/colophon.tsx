@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="w-full h-full flex items-center justify-center p-20">
-      <div className="flex flex-col gap-20 w-full max-w-lg px-4">
+    <div className="w-full h-full flex items-center justify-center p-20 max-sm:px-5">
+      <div className="flex flex-col gap-20 w-full max-w-lg px-2">
         <div>
           <Link href="/" className="font-semibold text-black dark:text-white">
             Daniel Goh
