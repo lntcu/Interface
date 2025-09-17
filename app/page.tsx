@@ -7,7 +7,7 @@ export default function Page() {
   const files = fs.readdirSync(filesDir);
 
   return (
-    <div className="p-10 max-sm:p-2">
+    <div className="p-10 max-sm:p-5">
       <p className="pb-20 max-w-lg">
         The materials contained and made available on this website (hereinafter
         referred to as the “Files”) are provided strictly on an “as-is” and
