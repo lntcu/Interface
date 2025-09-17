@@ -6,24 +6,22 @@ import type { ImageProps } from "next/image";
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }) => (
-      <h1
-        className="text-black dark:text-white pt-20 font-semibold"
-        id={children}
-      >
+      <h1 className="pt-20 font-semibold text-lg pb-5" id={children}>
         {children}
       </h1>
     ),
-    p: ({ children }) => (
-      <p className=" text-zinc-600 dark:text-zinc-300 py-5">{children}</p>
+    h2: ({ children }) => (
+      <h1 className="pt-15 font-medium text-lg pb-5" id={children}>
+        {children}
+      </h1>
     ),
+    p: ({ children }) => <p className="py-5">{children}</p>,
     strong: ({ children }) => <span className="font-semibold">{children}</span>,
     em: ({ children }) => <span className="italic">{children}</span>,
-    code: ({ children }) => (
-      <span className="text-zinc-600 dark:text-zinc-300 py-5">{children}</span>
-    ),
+    code: ({ children }) => <span className="py-5">{children}</span>,
     ul: ({ children }) => <ul className="list-disc ml-6  ">{children}</ul>,
     ol: ({ children }) => <ol className="list-decimal ml-6  ">{children}</ol>,
-    li: ({ children }) => <li className="py-1 ">{children}</li>,
+    li: ({ children }) => <li className="py-2">{children}</li>,
     hr: ({ children }) => (
       <div className="w-full h-[0.1rem] rounded-full bg-zinc-100">
         {children}
