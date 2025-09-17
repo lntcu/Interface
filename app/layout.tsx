@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Finder",
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased text-black bg-white`}>
         <div>{children}</div>
+        <Analytics />
       </body>
     </html>
   );
