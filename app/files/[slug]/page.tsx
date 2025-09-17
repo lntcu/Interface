@@ -1,11 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 
-export default async function FilePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = params;
+export default async function FilePage({ params }: any) {
+  const slug = params.slug as string;
 
   if (slug.endsWith(".pdf")) {
     redirect(`/files/${slug}`);
@@ -20,7 +16,7 @@ export default async function FilePage({
         </div>
       </main>
     );
-  } catch (err) {
+  } catch {
     notFound();
   }
 }
