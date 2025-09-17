@@ -1,8 +1,15 @@
-import { notFound } from "next/navigation";
-import PageProp from "next";
+import { notFound, redirect } from "next/navigation";
 
-export default async function FilePage({ params }: any) {
-  const { slug } = await params;
+export default async function FilePage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const { slug } = params;
+
+  if (slug.endsWith(".pdf")) {
+    redirect(`/files/${slug}`);
+  }
 
   try {
     const Page = (await import(`../../../public/files/${slug}.mdx`)).default;
@@ -13,7 +20,7 @@ export default async function FilePage({ params }: any) {
         </div>
       </main>
     );
-  } catch {
+  } catch (err) {
     notFound();
   }
 }
