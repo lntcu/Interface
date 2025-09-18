@@ -3,7 +3,7 @@ import path from "path";
 import Link from "next/link";
 
 export default function Page() {
-  const filesDir = path.join(process.cwd(), "public/files");
+  const filesDir = path.join(process.cwd(), "public/view");
   const files = fs.readdirSync(filesDir);
 
   return (
