@@ -85,12 +85,12 @@ export default function Page() {
             <Link
               href={href}
               key={file}
-              className="text-zinc-700 hover:text-black font-medium"
+              className="text-zinc-700 hover:text-black dark:text-zinc-300 dark:hover:text-white font-medium"
             >
               {file}
             </Link>
           );
-        })}
+        })}{" "}
       </div>
     </div>
   );
