@@ -79,8 +79,8 @@ export default function Page() {
         {files.map((file) => {
           const md = file.endsWith(".mdx");
           const href = md
-            ? `/files/${file.replace(/\.mdx$/, "")}`
-            : `/files/${file}`;
+            ? `/view/${file.replace(/\.mdx$/, "")}`
+            : `/view/${file}`;
           return (
             <Link
               href={href}
