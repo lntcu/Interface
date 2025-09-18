@@ -90,7 +90,7 @@ export default function Page() {
               {file}
             </Link>
           );
-        })}{" "}
+        })}
       </div>
     </div>
   );
