@@ -19,11 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased text-black bg-white `}>
-        <div className="fixed top-0 left-0 z-100 backdrop-blur-xl w-screen h-screen flex flex-col items-center justify-center">
-          <p className="font-medium text-lg">I might have deleted this.</p>
-          <p className="text-sm font-medium opacity-20">
-            Just delete this banner.
-          </p>
+        <div className="fixed top-0 left-0 z-100 backdrop-blur-xl w-screen h-screen flex flex-col items-center justify-center pointer-events-none">
+          <p className="font-medium text-lg">Seems a bit blur.</p>
         </div>
         <div>{children}</div>
         <Analytics />
