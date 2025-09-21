@@ -15,7 +15,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h1>
     ),
-    p: ({ children }) => <p className="py-5">{children}</p>,
+    p: ({ children }) => <p className="py-1">{children}</p>,
+    blockquote: ({ children }) => (
+      <blockquote className="my-5 relative before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-1 before:bg-zinc-200 dark:before:bg-zinc-700 before:rounded-lg text-zinc-700 dark:text-zinc-200 font-medium bg-zinc-100 dark:bg-zinc-800 rounded-lg px-3 py-0.5">
+        {children}
+      </blockquote>
+    ),
     strong: ({ children }) => <span className="font-semibold">{children}</span>,
     em: ({ children }) => <span className="italic">{children}</span>,
     code: ({ children }) => <span className="py-5">{children}</span>,
