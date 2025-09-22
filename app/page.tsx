@@ -7,8 +7,15 @@ export default function Page() {
   const files = fs.readdirSync(filesDir);
 
   return (
-    <div className="p-10 max-sm:p-5">
-      <p className="pb-20 max-w-lg">
+    <div className="">
+      <p className="relative before:absolute before:-left-3 before:top-0 before:bottom-0 before:w-1 before:bg-zinc-200 dark:before:bg-zinc-700 before:rounded-lg mb-20">
+        <span className="block font-medium pb-4">Notice of Amendments</span>
+        Pursuant to review, it is hereby noted that two amendments have been
+        made to expository.mdx to ensure factual accuracy. These corrections are
+        limited to the matters specified and do not otherwise alter the
+        substance or intent of the statements contained therein.
+      </p>
+      <p className="pb-20 ">
         The materials contained and made available on this website (hereinafter
         referred to as the “Files”) are provided strictly on an “as-is” and
         “as-available” basis, solely for limited personal reference and viewing.
@@ -24,7 +31,7 @@ export default function Page() {
         the Files, and any infringement, attempted use, or misappropriation
         shall be pursued to the fullest extent permitted by law.
       </p>
-      <p className="pb-20 max-w-lg">
+      <p className="pb-20 ">
         The Owner further disclaims, rejects, and expressly warns that the Files
         are not, and shall not be construed as, reliable, accurate,
         comprehensive, or suitable for any serious academic, professional, or
@@ -40,7 +47,7 @@ export default function Page() {
         satisfactory academic performance, examination success, or otherwise
         favorable outcomes.
       </p>
-      <p className="pb-20 max-w-lg">
+      <p className="pb-20 ">
         Users are hereby emphatically cautioned that any engagement with the
         Files may be counterproductive and potentially detrimental to their
         academic progress. The Owner cannot, and does not, assume any
@@ -56,7 +63,7 @@ export default function Page() {
         from any and all claims, liabilities, damages, or losses arising
         directly or indirectly from such use.
       </p>
-      <p className="pb-20 max-w-lg">
+      <p className="pb-20 ">
         In summation, the Files are neither recommended nor endorsed, and the
         Owner disclaims any implication to the contrary. They are, in the
         Owner’s unequivocal assessment, of substandard quality, fundamentally
@@ -69,7 +76,7 @@ export default function Page() {
         the user’s peril, with full recognition of the Files’ demonstrable
         shortcomings and inherent unreliability.
       </p>
-      <p className="pb-20 max-w-lg">
+      <p className="pb-20 ">
         The Files on this website are of poor quality, unreliable, and
         unsuitable for serious academic use. Copying or distributing them is
         strictly prohibited, and relying on them will not guarantee good exam

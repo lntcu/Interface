@@ -10,8 +10,8 @@ export default async function FilePage({ params }: any) {
   try {
     const Page = (await import(`../../../public/files/${slug}.mdx`)).default;
     return (
-      <main className="flex items-center justify-center py-10 max-sm:p-5 leading-5">
-        <div className="w-xl">
+      <main className="">
+        <div className="">
           <Page />
         </div>
       </main>

@@ -19,8 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased text-black bg-white`}>
-        {children}
+      <body
+        className={`${inter.className} antialiased leading-5 text-black bg-white flex items-center justify-center flex-col w-full h-full`}
+      >
+        <div className="max-w-lg py-30">{children}</div>
         <Analytics />
         <SpeedInsights />
       </body>
