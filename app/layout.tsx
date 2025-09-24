@@ -23,9 +23,9 @@ export default function RootLayout({
         className={`${inter.className} antialiased leading-5 text-black bg-white flex items-center justify-center flex-col w-full h-full`}
       >
         <div className="max-w-lg py-30">{children}</div>
-        <div className="fixed top-0 left-0 z-1000 backdrop-blur-lg flex pointer-events-none items-center justify-center w-screen h-screen">
+        {/*<div className="fixed top-0 left-0 z-1000 backdrop-blur-lg flex pointer-events-none items-center justify-center w-screen h-screen">
           <p className="text-lg font-medium">I might have deleted this.</p>
-        </div>
+        </div>*/}
         <Analytics />
         <SpeedInsights />
       </body>
