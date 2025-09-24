@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased leading-5 text-black bg-white flex items-center justify-center flex-col w-full h-full`}
       >
-        <div className="max-w-lg py-30">{children}</div>
+        <div className="max-w-lg py-30 px-5">{children}</div>
         <Analytics />
         <SpeedInsights />
       </body>
