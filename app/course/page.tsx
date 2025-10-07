@@ -9,7 +9,7 @@ export default function Page() {
         src="https://tally.so/widgets/embed.js"
       />
       <div className="w-screen h-screen py-20 flex items-start justify-start flex-col">
-        <div className="px-20">
+        <div className="px-20 max-sm:px-2">
           <p className="text-3xl font-medium">Post Academia Courses</p>
           <p className="font-medium text-lg max-w-xl pt-5 pb-20">
             Computing, and tecnical related courses provided by certified
@@ -18,7 +18,9 @@ export default function Page() {
           </p>
         </div>
         <div>
-          <p className="text-2xl font-medium pb-5 px-20">Web Development</p>
+          <p className="text-2xl font-medium pb-5 px-20 max-sm:px-2">
+            Web Development
+          </p>
           <div className="w-screen h-90 overflow-x-auto snap-mandatory snap-x mb-20 px-20 flex items-center justify-start gap-5">
             <Course
               color="lime"
@@ -41,7 +43,9 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <p className="text-2xl font-medium pb-5 px-20">General Programming</p>
+          <p className="text-2xl font-medium pb-5 px-20 max-sm:px-2">
+            General Programming
+          </p>
           <div className="w-screen h-90 overflow-x-auto snap-mandatory snap-x mb-20 px-20 flex items-center justify-start gap-5">
             <Course
               color="sky"
