@@ -55,7 +55,7 @@ export default function Page() {
             <Course
               color="pink"
               title="Python for Cryptography"
-              content="Learn Python while also learning cryptography and encryption simultaneously."
+              content="Learn Python while also learning cryptography and encryption at the same time."
               date="21-22 Oct"
               time="3-5 PM"
               note="No prior prerequisite."
