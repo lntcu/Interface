@@ -3,6 +3,8 @@
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+import Button, { Hyperlink } from "@/components/button";
+import Card from "@/components/card";
 
 export default function Page() {
   const [more, setMore] = useState(false);
@@ -53,12 +55,9 @@ export default function Page() {
             <p className="font-medium tracking-tight text-5xl max-sm:text-3xl text-center bg-gradient-to-r from-zinc-500 dark:from-zinc-400 via-zinc-900 dark:via-zinc-50 to-zinc-500 dark:to-zinc-400 bg-clip-text text-transparent">
               Student and developer. Does web development and app development.
             </p>
-            <button
-              className="bg-radial from-zinc-100 dark:from-zinc-900 to-zinc-200 dark:to-zinc-800 border-zinc-300 dark:border-zinc-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-pointer py-2 transition-all active:scale-90"
-              onClick={() => setMore(true)}
-            >
+            <Button color="zinc" click={() => setMore(true)}>
               Find out more
-            </button>
+            </Button>
           </motion.div>
           <motion.div
             className={`absolute top-0 left-0 z-30 w-screen h-screen flex flex-col items-center justify-center gap-10 backdrop-blur-xl ${more ? "pointer-events-auto" : "pointer-events-none"}`}
@@ -70,40 +69,37 @@ export default function Page() {
             transition={{ ease: "easeInOut" }}
           >
             <div className="w-screen h-90 flex gap-5 items-center justify-start overflow-x-auto snap-x snap-mandatory px-20 max-sm:px-10 scrollbar-hide">
-              <div className="snap-center w-80 h-90 shrink-0 bg-linear-to-b from-orange-500/50 dark:from-orange-800/50 to-orange-300/50 dark:to-orange-900/50 border-t-1 border-orange-300/50 dark:border-orange-600/50 backdrop-blur-xl rounded-3xl p-5 flex flex-col justify-between items-start">
+              <Card color="orange">
                 <p className="font-medium text-3xl">Swift</p>
                 <p className="font-medium text-lg">
                   iOS, MacOS and VisionOS app development done using Swift
                   language.
                 </p>
-              </div>
-              <div className="snap-center w-80 h-90 shrink-0 bg-linear-to-b from-violet-500/50 dark:from-violet-800/50 to-violet-300/50 dark:to-violet-900/50 border-t-1 border-violet-300/50 dark:border-violet-600/50 backdrop-blur-xl rounded-3xl p-5 flex flex-col justify-between items-start">
+              </Card>
+              <Card color="purple">
                 <p className="font-medium text-3xl">NextJS</p>
                 <p className="font-medium text-lg">
                   React and Typescript, styled with Tailwind, animated with
                   Motion, hosted using Vercel with NextJS web framework.
                 </p>
-              </div>
-              <div className="snap-center w-80 h-90 shrink-0 bg-linear-to-b from-yellow-500/50 dark:from-yellow-800/50 to-yellow-300/50 dark:to-yellow-900/50 border-t-1 border-yellow-300/50 dark:border-yellow-600/50 backdrop-blur-xl rounded-3xl p-5 flex flex-col justify-between items-start">
+              </Card>
+              <Card color="yellow">
                 <p className="font-medium text-3xl">Python</p>
                 <p className="font-medium text-lg">
                   Offensive cybersecurity tool, machine learning language, and
                   as general purpose language.
                 </p>
-              </div>
-              <div className="snap-center w-80 h-90 shrink-0 bg-linear-to-b from-sky-500/50 dark:from-sky-800/50 to-sky-300/50 dark:to-sky-900/50 border-t-1 border-sky-300/50 dark:border-sky-600/50 backdrop-blur-xl rounded-3xl p-5 flex flex-col justify-between items-start">
+              </Card>
+              <Card color="sky">
                 <p className="font-medium text-3xl">Golang</p>
                 <p className="font-medium text-lg">
                   In the process of learning, not using frequently yet.
                 </p>
-              </div>
+              </Card>
             </div>
-            <button
-              className="bg-radial from-zinc-100 dark:from-zinc-900 to-zinc-200 dark:to-zinc-800 border-zinc-300 dark:border-zinc-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-pointer py-2 transition-all active:scale-90"
-              onClick={() => setMore(false)}
-            >
+            <Button color="zinc" click={() => setMore(false)}>
               Exit
-            </button>
+            </Button>
           </motion.div>
         </div>
         <div
@@ -114,7 +110,7 @@ export default function Page() {
             Selected Projects
           </p>
           <div className="w-screen h-90 z-10 flex gap-5 items-center justify-center max-sm:justify-start overflow-x-auto snap-x snap-mandatory px-20 max-sm:px-10 scrollbar-hide">
-            <div className="snap-center w-80 h-90 shrink-0 bg-linear-to-b from-lime-500/50 dark:from-lime-800/50 to-lime-300/50 dark:to-lime-900/50 border-t-1 border-lime-300/50 dark:border-lime-600/50 backdrop-blur-xl rounded-3xl p-5 flex flex-col justify-between items-start">
+            <Card color="yellow">
               <div className="flex flex-col items-start justify-center gap-10">
                 <p className="font-medium text-3xl">Portfolio</p>
                 <p className="font-medium text-lg">
@@ -122,18 +118,17 @@ export default function Page() {
                   now.
                 </p>
               </div>
-              <a
-                href="https://github.com/lntcu/interface"
-                target="_blank"
-                className="w-full bg-radial from-lime-100 dark:from-lime-900 to-lime-200 dark:to-lime-800 border-lime-300 dark:border-lime-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-pointer py-2 transition-all active:scale-90"
+              <Hyperlink
+                color="yellow"
+                link="https://github.com/lntcu/interface"
               >
                 <div className="flex items-center justify-between">
                   <p>View Source</p>
                   <ArrowUpRight />
                 </div>
-              </a>
-            </div>
-            <div className="snap-center w-80 h-90 shrink-0 bg-linear-to-b from-pink-500/50 dark:from-pink-800/50 to-pink-300/50 dark:to-pink-900/50 border-t-1 border-pink-300/50 dark:border-pink-600/50 backdrop-blur-xl rounded-3xl p-5 flex flex-col justify-between items-start">
+              </Hyperlink>
+            </Card>
+            <Card color="lime">
               <div className="flex flex-col items-start justify-center gap-10">
                 <p className="font-medium text-3xl">Pointer</p>
                 <p className="font-medium text-lg">
@@ -141,29 +136,22 @@ export default function Page() {
                   tracking as cursor.
                 </p>
               </div>
-              <a
-                href="https://github.com/lntcu/pointer"
-                target="_blank"
-                className="w-full bg-radial from-pink-100 dark:from-pink-900 to-pink-200 dark:to-pink-800 border-pink-300 dark:border-pink-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-pointer py-2 transition-all active:scale-90"
-              >
+              <Hyperlink color="lime" link="https://github.com/lntcu/pointer">
                 <div className="flex items-center justify-between">
                   <p>View Source</p>
                   <ArrowUpRight />
                 </div>
-              </a>
-            </div>
-            <div className="snap-center w-80 h-90 shrink-0 bg-linear-to-b from-teal-500/50 dark:from-teal-800/50 to-teal-300/50 dark:to-teal-900/50 border-t-1 border-teal-300/50 dark:border-teal-600/50 backdrop-blur-xl rounded-3xl p-5 flex flex-col justify-between items-start">
+              </Hyperlink>
+            </Card>
+            <Card color="teal">
               <div className="flex flex-col items-start justify-center gap-10">
-                <p className="font-medium text-3xl">Anniversary</p>
-                <p className="font-medium text-lg">
-                  Created a anniversary commeration webpage showcasing different
-                  milestones and media for a client organisation.
-                </p>
+                <p className="font-medium text-3xl">Coming Soon</p>
+                <p className="font-medium text-lg">Coming Soon</p>
               </div>
               <div className="w-full bg-radial from-teal-100 dark:from-teal-900 to-teal-200 dark:to-teal-800 border-teal-300 dark:border-teal-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-not-allowed opacity-50 py-2 transition-all">
                 Coming soon
               </div>
-            </div>
+            </Card>
           </div>
         </div>
         <div
@@ -174,27 +162,15 @@ export default function Page() {
             Contact and find me via
           </p>
           <div className="flex items-center justify-center gap-5 max-sm:gap-2">
-            <a
-              href="mailto:lntcu@duck.com"
-              target="_blank"
-              className="bg-radial from-zinc-100 dark:from-zinc-900 to-zinc-200 dark:to-zinc-800 border-zinc-300 dark:border-zinc-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-pointer py-2 transition-all active:scale-90"
-            >
+            <Hyperlink color="lime" link="mailto:lntcu@duck.com">
               Email
-            </a>
-            <a
-              href="https://github.com/lntcu"
-              target="_blank"
-              className="bg-radial from-zinc-100 dark:from-zinc-900 to-zinc-200 dark:to-zinc-800 border-zinc-300 dark:border-zinc-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-pointer py-2 transition-all active:scale-90"
-            >
+            </Hyperlink>
+            <Hyperlink color="teal" link="https://github.com/lntcu">
               Github
-            </a>
-            <a
-              href="https://lhog.vercel.app"
-              target="_blank"
-              className="bg-radial from-zinc-100 dark:from-zinc-900 to-zinc-200 dark:to-zinc-800 border-zinc-300 dark:border-zinc-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-pointer py-2 transition-all active:scale-90"
-            >
+            </Hyperlink>
+            <Hyperlink color="green" link="https://lhog.vercel.app">
               Web
-            </a>
+            </Hyperlink>
           </div>
         </div>
       </div>
