@@ -146,7 +146,9 @@ export default function Page() {
             <Card color="teal">
               <div className="flex flex-col items-start justify-center gap-10">
                 <p className="font-medium text-3xl">Coming Soon</p>
-                <p className="font-medium text-lg">Coming Soon</p>
+                <p className="font-medium text-lg">
+                  Coming Soon (Most likely early 2026)
+                </p>
               </div>
               <div className="w-full bg-radial from-teal-100 dark:from-teal-900 to-teal-200 dark:to-teal-800 border-teal-300 dark:border-teal-600 border-t-1 rounded-full font-medium text-lg px-6 cursor-not-allowed opacity-50 py-2 transition-all">
                 Coming soon
