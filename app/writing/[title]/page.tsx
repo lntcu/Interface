@@ -7,7 +7,7 @@ import { Undo2 } from "lucide-react";
 
 export default function Page() {
   const params = useParams();
-  const path = "@/app/writing/document/" + params.title + ".mdx";
+  const path = "./../document/" + params.title + ".mdx";
   const Writing = dynamic(() => import(path), {
     ssr: false,
   });
