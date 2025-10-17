@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 
-const inter = Inter({
-  subsets: ["latin"],
+const display = localFont({
+  src: "./../public/Display.ttf",
+});
+
+const inter = Inter();
+
+const iosevka = localFont({
+  src: "./../public/Iosevka.ttf",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body
+        className={`${inter.className} ${display.style} ${iosevka.style} font-[500] -tracking-[0.2px] text-[0.9rem] antialiased selection:bg-sky-300/50 dark:selection:bg-sky-700/50`}
+      >
+        {children}
+      </body>
       <Analytics />
     </html>
   );
